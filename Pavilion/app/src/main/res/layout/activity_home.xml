@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".activities.HomeActivity">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="127dp"
+        android:layout_marginTop="30dp"
+        app:srcCompat="@drawable/logo3"/>
+
+    <TextView
+        android:id="@+id/edittext_name"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginTop="10dp"
+        android:textColor="#050505"
+        android:textSize="25dp"
+        android:textAllCaps="true"/>
+
+    <Button
+        android:id="@+id/button_logIn"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:textColor="#FFFFFF"
+        android:background="#488B4B"
+        android:text="@string/Entry"/>
+
+    <Button
+        android:id="@+id/button_logOff"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:textColor="#FFFFFF"
+        android:background="#8A251E"
+        android:text="@string/Exit"/>
+
+
+    <TextView
+        android:id="@+id/login_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textColor="#0B0B0B"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/logoff_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textColor="#080808"
+        android:textSize="25sp" />
+
+    <Button
+        android:id="@+id/attendance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:orientation="horizontal"
+        android:textColor="#333333"
+        android:background="#75AE79"
+        android:baselineAligned="false"
+        android:text="@string/attendance"/>
+
+    <Button
+        android:id="@+id/catering"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:textColor="#333333"
+        android:background="#75AE79"
+        android:baselineAligned="false"
+        android:text="@string/catering"/>
+
+    <Button
+        android:id="@+id/leaveManage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:textColor="#333333"
+        android:background="#75AE79"
+        android:baselineAligned="false"
+        android:text="@string/leave_manage"/>
+
+    <Button
+        android:id="@+id/button_signOut"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:textColor="#333333"
+        android:baselineAligned="false"
+        android:background="#E0736E"
+        android:text="@string/sign_out"/>
+
+
+
+
+</LinearLayout>
+</ScrollView>

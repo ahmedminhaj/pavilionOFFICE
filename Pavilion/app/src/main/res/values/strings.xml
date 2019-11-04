@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Pavilion</string>
+    <string name="name">Name</string>
+    <string name="password">Password</string>
+    <string name="not_registered">Not Registered?</string>
+    <string name="sing_in">Sign In</string>
+    <string name="sing_up">Sign up</string>
+    <string name="welcome">Welcome to Pavilion</string>
+    <string name="email">Email</string>
+    <string name="already_registered">Already Registered?</string>
+    <string name="join">Join Team Pavilion</string>
+    <string name="logged_time">Log In</string>
+    <string name="log_out">Log Out</string>
+    <string name="Exit">Exit Time</string>
+    <string name="Entry">Entry Time</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="attendance">Attendance</string>
+    <string name="catering">Pavilion Catering Service</string>
+    <string name="leave_manage">Leave Management</string>
+    <string name="home_button">Home</string>
+    <string name="leave_management">Leave Management</string>
+
+</resources>
