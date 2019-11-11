@@ -14,7 +14,10 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".activities.LeaveManageActivity"></activity>
+        <activity android:name=".activities.OvertimeRequestActivity"></activity>
+        <activity android:name=".activities.LeaveRequestActivity" />
+        <activity android:name=".activities.MealOrderActivity" />
+        <activity android:name=".activities.LeaveManageActivity" />
         <activity android:name=".activities.CateringActivity" />
         <activity android:name=".activities.AttendanceActivity" />
         <activity android:name=".activities.HomeActivity" />

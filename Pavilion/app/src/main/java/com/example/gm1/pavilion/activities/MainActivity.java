@@ -16,7 +16,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.gm1.pavilion.R;
-import com.example.gm1.pavilion.models.SignInRespose;
+import com.example.gm1.pavilion.models.response.SignInRespose;
 import com.example.gm1.pavilion.api.RetrofitClient;
 import com.example.gm1.pavilion.storage.SharedPrefManager;
 

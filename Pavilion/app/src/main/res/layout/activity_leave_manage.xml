@@ -10,8 +10,7 @@
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center_horizontal"
-        android:layout_marginTop="10dp"
-        tools:context=".activities.AttendanceActivity">
+        tools:context=".activities.LeaveManageActivity">
 
         <TextView
             android:layout_width="wrap_content"
@@ -31,11 +30,82 @@
             android:background="#488B4B"
             android:text="@string/home_button"/>
 
-        <ListView
-            android:id="@+id/list_leave"
+
+        <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:layout_marginTop="50dp"></ListView>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#B9DDBB">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Leave History"
+                    android:textSize="25dp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="100dp"/>
+
+                <Button
+                    android:id="@+id/button_request_leave"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#488B4B"
+                    android:text="Add Leave"
+                    android:textColor="#FFFFFF" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/leave_recyclerView"
+            android:layout_width="match_parent"
+            android:padding="15dp"
+            android:layout_height="wrap_content"/>
+
+
+        <TableLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#B9DDBB">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="60dp"
+                    android:text="Overtime History"
+                    android:textAlignment="center"
+                    android:textSize="25dp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/button_request_overtime"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:background="#488B4B"
+                    android:text="Add Overtime"
+                    android:textColor="#FFFFFF" />
+
+            </TableRow>
+
+        </TableLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/overtime_recyclerView"
+            android:layout_width="match_parent"
+            android:padding="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"/>
 
     </LinearLayout>
 </ScrollView>

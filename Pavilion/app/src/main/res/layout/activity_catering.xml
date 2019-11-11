@@ -31,11 +31,46 @@
             android:background="#488B4B"
             android:text="@string/home_button"/>
 
-        <ListView
-            android:id="@+id/list_catering"
+        <TableLayout
             android:layout_width="match_parent"
-            android:layout_height="500dp"
-            android:layout_marginTop="50dp"></ListView>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <TableRow
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:background="#B9DDBB">
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Meal History"
+                    android:textSize="25dp"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="120dp"/>
+
+                <Button
+                    android:id="@+id/button_place_order"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:textColor="#FFFFFF"
+                    android:background="#488B4B"
+                    android:text="Order Meal"/>
+
+            </TableRow>
+
+        </TableLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:padding="15dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="15dp"
+            android:id="@+id/catering_recyclerView"/>
+
+
 
     </LinearLayout>
 </ScrollView>

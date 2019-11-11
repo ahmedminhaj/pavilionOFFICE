@@ -10,7 +10,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import com.example.gm1.pavilion.R;
 import com.example.gm1.pavilion.api.RetrofitClient;
-import com.example.gm1.pavilion.models.EntryExitResponse;
+import com.example.gm1.pavilion.models.response.EntryExitResponse;
 import com.example.gm1.pavilion.models.User;
 import com.example.gm1.pavilion.storage.SharedPrefManager;
 
@@ -27,6 +27,7 @@ public class HomeActivity extends AppCompatActivity {
     Button mAttendance;
     Button mCatering;
     Button mLeaveManagement;
+    TextView mTodayMeal;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +35,7 @@ public class HomeActivity extends AppCompatActivity {
         setContentView(R.layout.activity_home);
 
         mUserName = findViewById(R.id.edittext_name);
+
         User user = SharedPrefManager.getInstance(this).getData(); //user data
         mUserName.setText(user.getName()); //show user name
 
@@ -45,8 +47,8 @@ public class HomeActivity extends AppCompatActivity {
 
         mButtonLogIn = findViewById(R.id.button_logIn);
         mButtonLogOff = findViewById(R.id.button_logOff);
-//        mButtonLogIn.setVisibility(View.VISIBLE);
-//        mButtonLogOff.setVisibility(View.GONE);
+        mButtonLogIn.setVisibility(View.GONE);
+        mButtonLogOff.setVisibility(View.GONE);
 
 
         //entry and exit time checker
@@ -107,11 +109,13 @@ public class HomeActivity extends AppCompatActivity {
                 EntryExitResponse timeCheckResponse = response.body();
                 //entry time checker
                 if(timeCheckResponse.isStatus()){
+
                     if(timeCheckResponse.getEntry_time() != null && timeCheckResponse.getExit_time() == null){
                         TextView textView = findViewById(R.id.login_time);
                         textView.setText(" Entry Time: " + timeCheckResponse.getEntry_time());
+                        TextView textViewMeal = findViewById(R.id.today_meal);
+                        textViewMeal.setText(" Today Meal: " + timeCheckResponse.getToday_meal());
                         //exit time button
-//                        mButtonLogOff = findViewById(R.id.button_logOff);
                         mButtonLogOff.setVisibility(View.VISIBLE);
                         mButtonLogIn.setVisibility(View.GONE);
                         mButtonLogOff.setOnClickListener(new View.OnClickListener() {
@@ -128,6 +132,8 @@ public class HomeActivity extends AppCompatActivity {
                         mButtonLogOff.setVisibility(View.GONE);
                         TextView textView = findViewById(R.id.login_time);
                         textView.setText(" Entry Time: " + timeCheckResponse.getEntry_time());
+                        TextView textViewMeal = findViewById(R.id.today_meal);
+                        textViewMeal.setText(" Today Meal: " + timeCheckResponse.getToday_meal());
                         TextView textViewExit = findViewById(R.id.logoff_time);
                         textViewExit.setText(" Exit Time: " + timeCheckResponse.getExit_time());
                     }
@@ -179,6 +185,8 @@ public class HomeActivity extends AppCompatActivity {
 
                     TextView textView = findViewById(R.id.login_time);
                     textView.setText(" Entry Time: " + entryExitResponse.getEntry_time());
+                    TextView textViewMeal = findViewById(R.id.today_meal);
+                    textViewMeal.setText(" Today Meal: " + entryExitResponse.getToday_meal());
                     Toast.makeText(HomeActivity.this, entryExitResponse.getMessage(), Toast.LENGTH_SHORT).show();
 
                 }else{

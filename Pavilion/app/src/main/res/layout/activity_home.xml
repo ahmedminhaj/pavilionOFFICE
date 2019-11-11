@@ -28,6 +28,34 @@
         android:textSize="25dp"
         android:textAllCaps="true"/>
 
+    <TextView
+        android:id="@+id/today_meal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textColor="#080808"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/login_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textColor="#0B0B0B"
+        android:textSize="25sp" />
+
+    <TextView
+        android:id="@+id/logoff_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text=""
+        android:textColor="#080808"
+        android:textSize="25sp" />
+
+
     <Button
         android:id="@+id/button_logIn"
         android:layout_width="150dp"
@@ -47,25 +75,6 @@
         android:textColor="#FFFFFF"
         android:background="#8A251E"
         android:text="@string/Exit"/>
-
-
-    <TextView
-        android:id="@+id/login_time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text=""
-        android:textColor="#0B0B0B"
-        android:textSize="25sp" />
-
-    <TextView
-        android:id="@+id/logoff_time"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="10dp"
-        android:text=""
-        android:textColor="#080808"
-        android:textSize="25sp" />
 
     <Button
         android:id="@+id/attendance"
